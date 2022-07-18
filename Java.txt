@@ -1,0 +1,22 @@
+1)	Event Loop
+JavaScript có mô hình thời gian chạy (runtime model) dựa trên vòng lặp sự kiện, hay còn gọi là Event Loop , mô hình này chịu trách nhiệm xử lí dòng lệnh, thu thập và xử lý các sự kiện cũng như thực thi các tác vụ con được xếp hàng đợi. Mô hình này khá khác biệt so với các mô hình ở các ngôn ngữ khác như C và Java.
+Nhiệm vụ của Event Loop là đọc Stack và Event Queue. Stack rỗng -> nhặt event đầu trong hàng chờ event  và các xử lí event liên quan đẩy vào Stack. Nó chỉ dừng lại khi hàm return hoặc throw exception.
+2)	CallBack
+Callback là một hàm sẽ được thực hiện sau khi một hàm khác đã thực hiện xong.
+Callback là một cách để đảm bảo code nhất định không thực thi cho đến khi code khác thực hiện xong.
+
+3)	This trong JavaScript
+Tất cả các hàm của JavaScript đều có thuộc tính, giống như mọi đối tượng khác. Và khi một hàm được thực thi, nó sẽ có thuộc tính ‘this’ - một biến với giá trị là đối tượng đã gọi hàm sử dụng ‘this’. ‘this’ luôn luôn tham chiếu (và có giá trị của) đối tượng - một đối tượng duy nhất - và nó thường được sử dụng bên trong hàm hay phương thức, mặc dù nó có thể dùng được một cách toàn cục bên ngoài hàm.
+4)	Object trong JavaScript
+Dối tượng trong Javascript là một tập hợp các cặp khóa - giá trị, tương tự như bản đồ, từ điển, hay hash-table trong ngôn ngữ lập trình khác.
+
+•	Đối tượng là một tập hợp các thuộc tính
+•	Thuộc tính là một cặp khóa - giá trị chứa tên và giá trị
+•	Tên thuộc tính là một giá trị duy nhất có thể bị ép buộc vào một chuỗi và trỏ đến một giá trị
+•	Giá trị thuộc tính có thể là bất kỳ giá trị nào, bao gồm các đối tượng khác hoặc các hàm, được liên kết với tên/khóa
+5)	Prototype trong JS
+Prototype là cơ chế mà các object trong javascript kế thừa các tính năng từ một object khác. Tất cả các object trong javascript đều có một prototype, và các object này kế thừa các thuộc tính (properties) cũng như phương thức (methods) từ prototype của mình.
+
+•	Trong Javascript, một hàm (function) cũng được coi là 1 object. Và hàm có một thuộc tính gọi là thuộc tính prototype, bản thân thuộc tính prototype này mang giá trị là 1 object.
+•	Nếu ta dùng hàm để tạo ra 1 mẫu khởi tạo đối tượng, thì bạn có thể thêm được các thuộc tính hoặc phương thức vào thuộc tính prototype của hàm khởi tạo để thực hiện kế thừa. Tất cả các đối tượng con tạo ra bởi hàm khởi tạo đều mang các giá trị trong thuộc tính prototype của hàm này.
+•	Các object trong Javascript có một khái niệm gọi là prototype attribute, đặc tính này có giá trị trỏ tới prototype object mà nó kế thừa thuộc tính. Ta dùng thuộc tính proto  để truy cập tới prototype object.
